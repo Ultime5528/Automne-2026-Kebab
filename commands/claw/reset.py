@@ -14,9 +14,9 @@ class Reset(Command):
         self.claw.grab()
 
     def isFinished(self) -> bool:
-        return self.claw.is_switch_pressed()
+        return self.claw.is_open()
 
 
     def end(self, interrupted: bool):
         self.claw.stop()
-        self.claw.encoder.setPosition(0)
+        self.claw._encoder.setPosition(0)

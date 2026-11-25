@@ -32,22 +32,22 @@
     "###/SmartDashboard/Arm commands/Drop": {
       "Collapsed": "0",
       "Pos": "280,48",
-      "Size": "278,71"
+      "Size": "278,65"
     },
     "###/SmartDashboard/Arm commands/Move_down": {
       "Collapsed": "0",
       "Pos": "252,135",
-      "Size": "309,65"
+      "Size": "309,71"
     },
     "###/SmartDashboard/Arm commands/Move_up": {
       "Collapsed": "0",
       "Pos": "262,53",
-      "Size": "296,65"
+      "Size": "296,71"
     },
     "###/SmartDashboard/Arm commands/Refuel": {
       "Collapsed": "0",
       "Pos": "252,122",
-      "Size": "290,71"
+      "Size": "290,65"
     },
     "###/SmartDashboard/Claw commands/Grab": {
       "Collapsed": "0",
@@ -252,7 +252,7 @@
     "###FMS": {
       "Collapsed": "0",
       "Pos": "5,540",
-      "Size": "169,184"
+      "Size": "283,140"
     },
     "###Joysticks": {
       "Collapsed": "0",

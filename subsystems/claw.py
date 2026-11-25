@@ -6,42 +6,42 @@ from ultime.switch import Switch
 
 
 class Claw(Subsystem):
-    speed_motor = autoproperty(0.5)
-    slow_motor = autoproperty(0.2)
-    maintain_speed = autoproperty(0.05)
+    speed_motor = autoproperty(0.1)
+    speed_slow = autoproperty(0.05)
+    speed_maintain = autoproperty(0.01)
 
     def __init__(self):
         super().__init__()
 
 
-        self.claw_motor = rev.SparkMax(
+        self._motor = rev.SparkMax(
             ports.CAN.claw_motor, rev.SparkMax.MotorType.kBrushless
         )
-        self.encoder = self.claw_motor.getEncoder()
+        self._encoder = self._motor.getEncoder()
         self.switch = Switch(
-            Switch.Type.NormallyOpen, ports.DIO.switch_min_claw,
+            Switch.Type.NormallyOpen, ports.DIO.claw_switch_min,
         )
 
     def grab(self):
-        self.claw_motor.set(self.speed_motor)
+        self._motor.set(self.speed_motor)
 
     def slow_grab(self):
-        self.claw_motor.set(self.slow_motor)
+        self._motor.set(self.speed_slow)
 
     def maintain(self):
-        self.claw_motor.set(self.maintain_speed)
+        self._motor.set(self.speed_maintain)
 
     def ungrab(self):
-        self.claw_motor.set(-self.speed_motor)
+        self._motor.set(-self.speed_motor)
 
     def slow_ungrab(self):
-        self.claw_motor.set(-self.slow_motor)
+        self._motor.set(-self.speed_slow)
 
     def stop(self):
-        self.claw_motor.stopMotor()
+        self._motor.stopMotor()
 
-    def is_switch_pressed(self) -> bool:
+    def is_open(self) -> bool:
         return self.switch.isPressed()
 
     def get_encoder(self) -> float:
-        return self.claw_motor.getEncoder().getPosition()
+        return self._encoder.getPosition()

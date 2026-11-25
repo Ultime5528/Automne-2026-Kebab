@@ -22,9 +22,9 @@ class PWM(Immutable):
     pass
 
 class DIO(Immutable):
-    switch_min_claw = 0
-    switch_min_arm = 1
-    switch_max_arm = 2
+    claw_switch_min = 0
+    arm_switch_min = 1
+    arm_switch_max = 2
 
 class PDP(Immutable):
     pass

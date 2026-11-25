@@ -191,12 +191,12 @@
       "/SmartDashboard/SysID/QuasistaticReverse": "Command"
     },
     "windows": {
-      "/SmartDashboard/Arm commands/Drop": {
+      "/SmartDashboard/Arm commands/Move_down": {
         "window": {
           "visible": true
         }
       },
-      "/SmartDashboard/Arm commands/Refuel": {
+      "/SmartDashboard/Arm commands/Move_up": {
         "window": {
           "visible": true
         }
@@ -264,7 +264,8 @@
   "NetworkTables Info": {
     "Server": {
       "open": true
-    }
+    },
+    "visible": true
   },
   "NetworkTables View": {
     "visible": false

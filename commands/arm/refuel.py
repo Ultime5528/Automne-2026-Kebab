@@ -1,20 +1,14 @@
+from commands2 import SequentialCommandGroup
+
+from commands.claw.grab import Grab
+from commands.arm.move_down import Move_down
+from subsystems.claw import Claw
 from subsystems.arm import Arm
-from ultime.command import Command
 
-class Refuel(Command):
+class Drop(SequentialCommandGroup):
 
-    def __init__(self, arm: Arm):
-        super().__init__()
-        self.arm = arm
-        self.addRequirements(self.arm)
-
-
-    def execute(self):
-        self.arm.move_down()
-
-    def isFinished(self) -> bool:
-        return self.arm.is_switch_min_pressed()
-
-    def end(self, interrupted: bool):
-        self.arm.stop()
-
+    def __init__(self, claw: Claw, arm: Arm):
+        super().__init__(
+            Move_down(arm),
+            Grab(claw),
+        )

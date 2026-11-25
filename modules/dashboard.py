@@ -2,8 +2,8 @@ import commands2
 import wpilib
 from commands.slider.left import SlideLeft
 
-from commands.arm.drop import Drop
-from commands.arm.refuel import Refuel
+from commands.arm.move_up import Move_up
+from commands.arm.move_down import Move_down
 from commands.slider.right import SlideRight
 from commands.claw.grab import Grab
 from commands.claw.ungrab import Ungrab
@@ -40,8 +40,8 @@ class DashboardModule(Module):
         """
         Arm
         """
-        putCommandOnDashboard("Arm", Drop(hardware.arm))
-        putCommandOnDashboard("Arm", Refuel(hardware.arm))
+        putCommandOnDashboard("Arm", Move_up(hardware.arm))
+        putCommandOnDashboard("Arm", Move_down(hardware.arm))
 
         """
         Slider

@@ -1,7 +1,5 @@
-import wpilib
 from ultime.command import Command
 from subsystems.slider import Slider
-from ultime.autoproperty import autoproperty
 
 
 class SlideRight(Command):

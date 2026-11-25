@@ -15,15 +15,15 @@ from ultime.tests import RobotTestController
 
 def test_ports(robot: Robot):
     climber = robot.hardware.climber
-    assert climber.claw_motor.getDeviceId() == 11
+    assert climber._motor.getDeviceId() == 11
     assert climber._switch.getChannel() == 6
 
 
 def test_settings(robot: Robot):
     climber = robot.hardware.climber
     assert climber._switch.getType() == Switch.Type.NormallyClosed
-    assert climber.claw_motor.getMotorType() == SparkBase.MotorType.kBrushless
-    assert not climber.claw_motor.getInverted()
+    assert climber._motor.getMotorType() == SparkBase.MotorType.kBrushless
+    assert not climber._motor.getInverted()
 
 
 def test_reset_climber(robot_controller: RobotTestController, robot: Robot):
