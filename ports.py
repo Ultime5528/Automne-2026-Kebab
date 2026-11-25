@@ -18,13 +18,16 @@ class CAN(Immutable):
     arm_motor = 1
     slider_motor = 2
 
+
 class PWM(Immutable):
     pass
+
 
 class DIO(Immutable):
     claw_switch_min = 0
     arm_switch_min = 1
     arm_switch_max = 2
+
 
 class PDP(Immutable):
     pass

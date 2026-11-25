@@ -9,10 +9,8 @@ class SlideRight(Command):
         self.slider = slider
         self.addRequirements(self.slider)
 
-
     def execute(self):
         self.slider.slide_right()
-
 
     def end(self, interrupted: bool):
         self.slider.stop()
