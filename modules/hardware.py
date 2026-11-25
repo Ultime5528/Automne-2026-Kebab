@@ -8,6 +8,7 @@ from ultime.module import Module
 from ultime.subsystem import Subsystem
 from subsystems.slider import Slider
 
+
 class HardwareModule(Module):
     def __init__(self):
         super().__init__()

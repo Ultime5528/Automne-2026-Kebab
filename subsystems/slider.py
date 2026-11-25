@@ -14,7 +14,6 @@ class Slider(Subsystem):
             ports.CAN.slider_motor, rev.SparkMax.MotorType.kBrushless
         )
 
-
     def slide_right(self):
         self._motor.set(self.speed)
 
@@ -27,4 +26,3 @@ class Slider(Subsystem):
     def logValues(self):
         super().logValues()
         self.log("motor_output", self._motor.get())
-    

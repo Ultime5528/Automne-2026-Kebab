@@ -11,7 +11,6 @@ class SlideLeft(Command):
         self.slider = slider
         self.addRequirements(self.slider)
 
-
     def execute(self):
         self.slider.slide_left()
 

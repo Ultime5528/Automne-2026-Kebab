@@ -29,7 +29,6 @@ class DashboardModule(Module):
         pass
 
     def setupCommands(self, hardware):
-
         """
         Claw
         """
@@ -48,8 +47,6 @@ class DashboardModule(Module):
         """
         putCommandOnDashboard("Slider", SlideRight(hardware.slider))
         putCommandOnDashboard("Slider", SlideLeft(hardware.slider))
-
-
 
     def robotInit(self) -> None:
         for subsystem in self._hardware.subsystems:

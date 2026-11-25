@@ -9,7 +9,6 @@ class Ungrab(Command):
         self.claw = claw
         self.addRequirements(self.claw)
 
-
     def execute(self):
         if self.claw.get_encoder() >= 1:
             self.claw.ungrab()
