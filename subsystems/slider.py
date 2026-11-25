@@ -1,25 +1,28 @@
 import rev
+
 import ports
 from ultime.autoproperty import autoproperty
 from ultime.subsystem import Subsystem
 
 
 class Slider(Subsystem):
-
-    speed_motor = autoproperty(0.1)
+    speed = autoproperty(0.1)
 
     def __init__(self):
         super().__init__()
-        self.motor = rev.SparkMax(
+        self._motor = rev.SparkMax(
             ports.CAN.slider_motor, rev.SparkMax.MotorType.kBrushless
         )
 
-
     def slide_right(self):
-        self.motor.set(self.speed_motor)
+        self._motor.set(self.speed)
 
     def slide_left(self):
-        self.motor.set(-self.speed_motor)
+        self._motor.set(-self.speed)
 
     def stop(self):
-        self.motor.stopMotor()
+        self._motor.stopMotor()
+
+    def logValues(self):
+        super().logValues()
+        self.log("motor_output", self._motor.get())

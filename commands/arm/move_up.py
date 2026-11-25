@@ -9,7 +9,6 @@ class Move_up(Command):
         self.arm = arm
         self.addRequirements(self.arm)
 
-
     def execute(self):
         if self.arm.get_encoder() > 1:
             self.arm.move_up()
@@ -21,4 +20,3 @@ class Move_up(Command):
 
     def end(self, interrupted: bool):
         self.arm.maintain()
-
