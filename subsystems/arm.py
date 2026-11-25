@@ -18,12 +18,13 @@ class Arm(Subsystem):
             ports.CAN.arm_motor, rev.SparkMax.MotorType.kBrushless
         )
         self.arm_switch_min = Switch(
-            Switch.Type.NormallyOpen, ports.DIO.arm_switch_min,
+            Switch.Type.NormallyOpen,
+            ports.DIO.arm_switch_min,
         )
         self.arm_switch_max = Switch(
-            Switch.Type.NormallyOpen, ports.DIO.arm_switch_max,
+            Switch.Type.NormallyOpen,
+            ports.DIO.arm_switch_max,
         )
-
 
     def move_up(self):
         self._motor.set(self.speed_motor)

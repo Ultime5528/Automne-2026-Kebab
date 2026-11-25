@@ -1,13 +1,13 @@
 from subsystems.arm import Arm
 from ultime.command import Command
 
+
 class Move_down(Command):
 
     def __init__(self, arm: Arm):
         super().__init__()
         self.arm = arm
         self.addRequirements(self.arm)
-
 
     def execute(self):
         self.arm.move_down()
@@ -17,4 +17,3 @@ class Move_down(Command):
 
     def end(self, interrupted: bool):
         self.arm.stop()
-

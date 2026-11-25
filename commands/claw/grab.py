@@ -12,7 +12,6 @@ class Grab(Command):
         self.claw = claw
         self.addRequirements(self.claw)
 
-
     def execute(self):
         if self.claw.get_position() <= 9:
             self.claw.grab()

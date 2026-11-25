@@ -9,13 +9,11 @@ class Reset(Command):
         self.claw = claw
         self.addRequirements(self.claw)
 
-
     def execute(self):
         self.claw.grab()
 
     def isFinished(self) -> bool:
         return self.claw.is_open()
-
 
     def end(self, interrupted: bool):
         self.claw.stop()

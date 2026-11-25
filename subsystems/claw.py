@@ -17,7 +17,8 @@ class Claw(Subsystem):
         )
         self._encoder = self._motor.getEncoder()
         self._switch = Switch(
-            Switch.Type.NormallyOpen, ports.DIO.claw_switch_min,
+            Switch.Type.NormallyOpen,
+            ports.DIO.claw_switch_min,
         )
 
     def grab(self):
