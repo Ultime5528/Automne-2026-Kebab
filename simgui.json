@@ -36,7 +36,7 @@
           "open": true
         }
       },
-      "SPARK MAX [1] RELATIVE ENCODER": {
+      "SPARK MAX [1]": {
         "header": {
           "open": true
         }
@@ -85,6 +85,8 @@
       "/FMSInfo": "FMSInfo",
       "/SmartDashboard/Alerts": "Alerts",
       "/SmartDashboard/Arm commands/Drop": "Command",
+      "/SmartDashboard/Arm commands/MoveDown": "Command",
+      "/SmartDashboard/Arm commands/MoveUp": "Command",
       "/SmartDashboard/Arm commands/Move_down": "Command",
       "/SmartDashboard/Arm commands/Move_up": "Command",
       "/SmartDashboard/Arm commands/Refuel": "Command",
@@ -191,12 +193,22 @@
       "/SmartDashboard/SysID/QuasistaticReverse": "Command"
     },
     "windows": {
-      "/SmartDashboard/Arm commands/Move_down": {
+      "/SmartDashboard/Arm commands/Drop": {
         "window": {
           "visible": true
         }
       },
-      "/SmartDashboard/Arm commands/Move_up": {
+      "/SmartDashboard/Arm commands/MoveDown": {
+        "window": {
+          "visible": true
+        }
+      },
+      "/SmartDashboard/Arm commands/MoveUp": {
+        "window": {
+          "visible": true
+        }
+      },
+      "/SmartDashboard/Arm commands/Refuel": {
         "window": {
           "visible": true
         }
@@ -222,7 +234,10 @@
         "left": 245,
         "right": 3942,
         "top": 118,
-        "width": 16.54119300842285
+        "width": 16.54119300842285,
+        "window": {
+          "visible": true
+        }
       },
       "/SmartDashboard/Slider commands/SlideLeft": {
         "window": {

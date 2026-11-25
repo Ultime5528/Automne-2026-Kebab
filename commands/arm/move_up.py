@@ -2,7 +2,7 @@ from subsystems.arm import Arm
 from ultime.command import Command
 
 
-class Move_up(Command):
+class MoveUp(Command):
 
     def __init__(self, arm: Arm):
         super().__init__()

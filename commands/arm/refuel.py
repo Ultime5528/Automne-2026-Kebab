@@ -1,14 +1,14 @@
 from commands2 import SequentialCommandGroup
 
 from commands.claw.grab import Grab
-from commands.arm.move_down import Move_down
+from commands.arm.move_down import MoveDown
 from subsystems.claw import Claw
 from subsystems.arm import Arm
 
-class Drop(SequentialCommandGroup):
+class Refuel(SequentialCommandGroup):
 
     def __init__(self, claw: Claw, arm: Arm):
         super().__init__(
-            Move_down(arm),
+            MoveDown(arm),
             Grab(claw),
         )
