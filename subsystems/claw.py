@@ -13,13 +13,13 @@ class Claw(Subsystem):
     def __init__(self):
         super().__init__()
 
-
         self._motor = rev.SparkMax(
             ports.CAN.claw_motor, rev.SparkMax.MotorType.kBrushless
         )
         self._encoder = self._motor.getEncoder()
         self.switch = Switch(
-            Switch.Type.NormallyOpen, ports.DIO.claw_switch_min,
+            Switch.Type.NormallyOpen,
+            ports.DIO.claw_switch_min,
         )
 
     def grab(self):
