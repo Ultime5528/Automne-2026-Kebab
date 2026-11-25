@@ -11,9 +11,9 @@ class Ungrab(Command):
 
 
     def execute(self):
-        if self.claw.get_encoder() >= 1:
+        if self.claw.get_position() >= 1:
             self.claw.ungrab()
-        elif self.claw.get_encoder() <= 1:
+        elif self.claw.get_position() <= 1:
             self.claw.slow_ungrab()
 
     def isFinished(self) -> bool:

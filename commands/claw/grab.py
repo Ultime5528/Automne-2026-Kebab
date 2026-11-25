@@ -14,13 +14,13 @@ class Grab(Command):
 
 
     def execute(self):
-        if self.claw.get_encoder() <= 9:
+        if self.claw.get_position() <= 9:
             self.claw.grab()
-        elif self.claw.get_encoder() >= 9:
+        elif self.claw.get_position() >= 9:
             self.claw.slow_grab()
 
     def isFinished(self) -> bool:
-        return self.claw.get_encoder() >= self.rotation_encoder_claw
+        return self.claw.get_position() >= self.rotation_encoder_claw
 
     def end(self, interrupted: bool):
         self.claw.maintain()

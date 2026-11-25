@@ -222,7 +222,10 @@
         "left": 245,
         "right": 3942,
         "top": 118,
-        "width": 16.54119300842285
+        "width": 16.54119300842285,
+        "window": {
+          "visible": true
+        }
       },
       "/SmartDashboard/Slider commands/SlideLeft": {
         "window": {
@@ -242,6 +245,9 @@
     },
     "transitory": {
       "SmartDashboard": {
+        "Claw": {
+          "open": true
+        },
         "Guide": {
           "open": true
         },
@@ -266,8 +272,5 @@
       "open": true
     },
     "visible": true
-  },
-  "NetworkTables View": {
-    "visible": false
   }
 }
