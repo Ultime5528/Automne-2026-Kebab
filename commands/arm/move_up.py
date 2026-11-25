@@ -11,9 +11,9 @@ class Move_up(Command):
 
 
     def execute(self):
-        if self.arm.get_encoder() > 1:
+        if self.arm.get_position() > 1:
             self.arm.move_up()
-        elif self.arm.get_encoder() <= 1:
+        elif self.arm.get_position() <= 1:
             self.arm.slow_move_up()
 
     def isFinished(self) -> bool:
